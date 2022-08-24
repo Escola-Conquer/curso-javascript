@@ -41,6 +41,7 @@ function insertUserInTable(nome, email, telefone, vaga) {
   const emailCell = row.insertCell(2)
   const phoneCell = row.insertCell(3)
   const jobCell = row.insertCell(4)
+  const actionCell = row.insertCell(5)
 
   countCell.appendChild(
     document.createTextNode(tableOfSubmitedUsers.rows.length)
@@ -70,7 +71,7 @@ form.addEventListener("submit", (event) => {
     arquivo: form.arquivo.value,
   })
 
-  alert("Dados enviados com sucesso!")
+  // alert("Dados enviados com sucesso!")
 
   insertUserInTable(
     form.nome.value,
