@@ -20,11 +20,9 @@ function handleExcludeUser(event) {
 document.getElementById("isAdmin").addEventListener("change", (event) => {
   if (event.target.checked) {
     document.getElementById("users-table-wrapper").style["display"] = "block"
-
-    return
+  } else {
+    document.getElementById("users-table-wrapper").style["display"] = "none"
   }
-
-  document.getElementById("users-table-wrapper").style["display"] = "none"
 })
 
 function insertUserInTable(nome, email, telefone, vaga) {
@@ -33,7 +31,7 @@ function insertUserInTable(nome, email, telefone, vaga) {
   const excludeButton = document.createElement("button")
   excludeButton.innerHTML = "Excluir"
   excludeButton.type = "button"
-  excludeButton.className = `${tableOfSubmitedUsers.rows.length} btn btn-danger`
+  excludeButton.className = "btn btn-danger"
   excludeButton.onclick = handleExcludeUser
 
   const countCell = row.insertCell(0)
@@ -46,7 +44,6 @@ function insertUserInTable(nome, email, telefone, vaga) {
   countCell.appendChild(
     document.createTextNode(tableOfSubmitedUsers.rows.length)
   )
-
   nameCell.appendChild(document.createTextNode(nome))
   emailCell.appendChild(document.createTextNode(email))
   phoneCell.appendChild(document.createTextNode(telefone))
@@ -71,7 +68,7 @@ form.addEventListener("submit", (event) => {
     arquivo: form.arquivo.value,
   })
 
-  // alert("Dados enviados com sucesso!")
+  alert("Dados enviados com sucesso!")
 
   insertUserInTable(
     form.nome.value,
