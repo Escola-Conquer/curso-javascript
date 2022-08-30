@@ -1,12 +1,3 @@
-// TODO
-// Exibir os dados do form em uma tabela ✅
-// Cada linha é uma resposta do form ✅
-// Botão de excluir na tabela ✅
-// Contexto: o usuário é um admin da página ✅
-
-// Validação do form (campos obrigatórios) pelo javascript
-// Validação para aparecer a tabela (somente para admins da página) (input check)
-
 const tableOfSubmitedUsers = document
   .getElementById("users")
   .getElementsByTagName("tbody")[0]
