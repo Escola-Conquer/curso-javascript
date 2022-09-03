@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <!-- checkbox do "sim" -->
+        <label>
+                  <input type="checkbox" name="fooby[1][]" id="sim" />Sim</label>
+      
+        <!-- checkbox do "não" -->
+        <label>
+                  <input type="checkbox" name="fooby[1][]" id="nao" />Não</label>
+      
+        <!-- botão -->
+        <input type="submit" name="btn" id="btn" disabled value="botão"></input>
+      </div>
+      <script>
+        $(document).ready(function() {
+            $("input:checkbox").on('click', function() {
+                var $box = $(this);
+                if ($box.is(":checked")) {
+                var group = "input:checkbox[name='" + $box.attr("name") + "']";
+
+                $(group).prop("checked", false);
+                $box.prop("checked", true);
+                } else {
+                $box.prop("checked", false);
+                }
+            });
+        });
+
+        $(document).ready(function() {
+            $('#sim').click(function() {
+                if ($('#sim').is(':checked')) {
+                $('#btn').attr('disabled', false);
+                } else {
+                $('#btn').attr('disabled', true);
+                }
+            });
+            $('#nao').click(function() {
+                if ($('#nao').is(':checked')) {
+                $('#btn').attr('disabled', true);
+                } else {
+                $('#btn').attr('disabled', true);
+                }
+            });
+        });
+
+      </script>
+</body>
+</html>
+
+
+
+
