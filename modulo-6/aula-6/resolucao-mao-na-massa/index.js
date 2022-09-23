@@ -1,4 +1,4 @@
-/*  - Crie um formulário, a partir do DOM, com os seguintes inputs(caso queira incluir mais inputs, fique a vontade) :
+/* - Crie um formulário, a partir do DOM, com os seguintes inputs(caso queira incluir mais inputs, fique a vontade) :
     Nome
     Sobrenome
     E-mail
@@ -13,8 +13,8 @@
   
   
   ALGUMAS POSSÍVEIS RESPOSTAS
-  
-  function nomeDaFunção() {
+  */
+  function createForm() {
   const body = document.querySelector('body');
   const div = document.createElement('div');
   div.setAttribute('id', 'container');
@@ -25,11 +25,11 @@
   div.appendChild(form);
 }
 
-nomeDaFunção();
+createForm();
 
 const form = document.getElementById('form');
 
-function nomeDaFunção() {
+function createInputs() {
   let inputName = document.createElement('input');
   inputName.setAttribute('placeholder', 'Nome');
   inputName.setAttribute('type', 'text');
@@ -96,7 +96,7 @@ function nomeDaFunção() {
     );
   }
   
-  nomeDaFunção();
+  createInputs();
   
   
   form.addEventListener('submit', function(e) {
@@ -170,4 +170,3 @@ function nomeDaFunção() {
   form.whatsapp.value = '';
   form.gender.value = ''; 
 })
-// */
