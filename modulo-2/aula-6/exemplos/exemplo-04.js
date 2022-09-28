@@ -1,0 +1,6 @@
+String(42); //"42"
+String(-85.6); //"-85.6"
+String(true); //"true"
+String(false); //"false"
+String(null); //"null"
+String(undefined); //"undefined"
